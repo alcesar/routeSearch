@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">RouteSearcher</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="search_label">Search</string>
+    <string name="without_results">No results foud!</string>
+
+</resources>
