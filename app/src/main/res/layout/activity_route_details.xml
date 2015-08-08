@@ -1,0 +1,110 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:background="@color/white_basic">
+
+    <LinearLayout
+        android:id="@+id/ll_route_details_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:gravity="center_vertical|center_horizontal"
+        android:background="@color/white_basic">
+
+        <TextView
+            android:id="@+id/tv_route_details_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/green_basic"
+            android:textSize="15sp"
+            android:layout_margin="8dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_route_details_streets"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_route_details_title"
+        android:orientation="vertical"
+        android:gravity="center_vertical|center_horizontal"
+        android:background="@color/white_basic">
+
+        <TextView
+            android:id="@+id/tv_route_details_streets"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/street_label"
+            android:textStyle="bold"
+            android:textColor="@color/green_basic"
+            android:textSize="15sp"
+            android:layout_margin="8dp"/>
+
+        <ListView
+            android:id="@+id/lv_route_streets"
+            android:layout_width="match_parent"
+            android:layout_height="135dp"
+            android:headerDividersEnabled="true"
+            android:footerDividersEnabled="true"
+            android:dividerHeight="2dp"
+            android:divider="@color/green_basic"
+            android:background="@color/green_opac_20"
+            android:layout_below="@+id/rl_search_field_form"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_route_details_schedule"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/ll_route_details_streets"
+        android:gravity="center_vertical|center_horizontal"
+        android:background="@color/white_basic">
+
+        <TextView
+            android:id="@+id/tv_route_details_schedule"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/schedule_label"
+            android:textStyle="bold"
+            android:textColor="@color/green_basic"
+            android:textSize="15sp"
+            android:layout_margin="8dp"/>
+
+        <ListView
+            android:id="@+id/lv_route_schedules"
+            android:layout_width="match_parent"
+            android:layout_height="135dp"
+            android:headerDividersEnabled="true"
+            android:footerDividersEnabled="true"
+            android:dividerHeight="2dp"
+            android:divider="@color/green_basic"
+            android:background="@color/green_opac_20"
+            android:layout_below="@+id/rl_search_field_form"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_route_details_action"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:background="@color/white_basic">
+
+        <Button
+            android:id="@+id/bt_back"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:text="@string/back_label"
+            android:background="@color/green_basic"
+            android:textColor="@color/white_basic" />
+
+    </LinearLayout>
+</RelativeLayout>

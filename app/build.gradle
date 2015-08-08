@@ -5,7 +5,7 @@ android {
     buildToolsVersion "22.0.1"
 
     defaultConfig {
-        applicationId "challenge.archtouch.br.com.routesearcher"
+        applicationId "challenge.arctouch.br.com.routesearcher"
         minSdkVersion 15
         targetSdkVersion 22
         versionCode 1

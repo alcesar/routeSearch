@@ -1,10 +1,14 @@
 <resources>
-    <string name="app_name">RouteSearcher</string>
+    <string name="app_name">Route Searcher</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
     <string name="search_label">Search</string>
-    <string name="without_results">No results foud!</string>
+    <string name="without_results">No results found!</string>
+    <string name="title_activity_route_details">Route Details</string>
+    <string name="back_label">Back</string>
+    <string name="street_label">Stops:</string>
+    <string name="schedule_label">Departures:</string>
 
 </resources>
