@@ -83,20 +83,24 @@ public class RouteDetailsActivity extends ActionBarActivity {
                             JSONObject result = new JSONObject(respostaOb.getResult());
                             JSONArray rows = result.getJSONArray("rows");
                             routeSchedule = new ArrayList<DepartureInfo>();
-                            String scheduleType = "";
+                            //creates the list of departures based on the server response...
                             for(int i = 0; i < rows.length(); i++){
                                 JSONObject currentSchedule = new JSONObject(rows.get(i).toString());
-                                //creates a header separator do group the schedules info by calendar type
-                                if(i == 0 || !currentSchedule.optString("calendar").equals(scheduleType)){
-                                    scheduleType = currentSchedule.optString("calendar");
-                                    DepartureInfo departureInfoSeparator = new DepartureInfo(true, scheduleType);
-                                    routeSchedule.add(i, departureInfoSeparator);
-                                }
-
                                 DepartureInfo deptInfo = new DepartureInfo(currentSchedule.optString("id"),
                                         currentSchedule.optString("calendar"), currentSchedule.optString("time"));
-
                                 routeSchedule.add(deptInfo);
+                            }
+
+                            //iterates over the list of departures and insert the group separators on
+                            // the right positions...
+                            String scheduleType = "";
+                            for (int a = 0; a< routeSchedule.size(); a++){
+                                //creates a header separator do group the schedules info by calendar type
+                                if(a == 0 || !routeSchedule.get(a).getCalendar().equals(scheduleType)){
+                                    scheduleType = routeSchedule.get(a).getCalendar();
+                                    DepartureInfo departureInfoSeparator = new DepartureInfo(true, scheduleType);
+                                    routeSchedule.add(a, departureInfoSeparator);
+                                }
                             }
 
                             RouteScheduleAdapter deptInfoAdapter = new RouteScheduleAdapter(RouteDetailsActivity.this, routeSchedule);
